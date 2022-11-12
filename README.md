@@ -366,7 +366,7 @@ You can find some example on the *response-custom* folder and on ([Response_HTTP
 ### PHP
 
 A basic support for PHP is available (tested with PHP 8.1.10 ZTS Visual C++ 2019 x64).<br>
-On php folder there is PHP Class with a basic CGI implementation in the *Response* generic method.<br>
+On php folder there is [PHP Class](Mini-HTTP-Listener/php/PHP.cs) with a basic CGI implementation in the *Response* generic method.<br>
 To use PHP scripts, you can insert for example the source files on the static folder path.<br>
 You can also rewrite for example your Custom Paths to PHP scripts, in this case you must invoke response generic method of PHP Class.<br>
 For more info about PHP, see examples chapter.<br>
@@ -946,3 +946,11 @@ public Dictionary<string, object> SetCustomResponse_GetFabrizioTest(HttpListener
 	};
 }
 ```
+
+# Credits
+
+Mini-HTTP-Listener is free and Open Source.<br>
+Program and Documentation released by Fabrizio Amorelli on November 2022.
+
+*Always believe in yourself*<br>
+*When your dreams come alive you're unstoppable*
