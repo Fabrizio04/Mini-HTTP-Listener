@@ -302,7 +302,7 @@ To specify a parameter, set the URL Path On the *CustomPath* attribute with the 
 [CustomPath("/mypath/{myname:datatype}")]
 ```
 
-Note: on this implementation, you can specify only 1 parameter for each URL.<br>
+Note: on this implementation, you can specify only 1 parameter for each URL in the end.<br>
 If you want to pass multiple parameters, you can use for example the QueryString.<br>
 On this implementation the Data Type already available for Special CustomPath URL are:
 
