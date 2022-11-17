@@ -103,9 +103,9 @@ Default configuration targets presetted for logging on the [appsettings.json](Mi
 - To disable for example Mini-HTTP-Listener Service or Response logging, leave the "writeTo" attribute empty on the rules array.
 - To disable for example all logging to Fie, leave the "writeTo" attribute empty on the rules array.
 
-### HTTPS
+## HTTPS
 
-#### Netsh
+### Netsh
 
 Simple steps to enable SSL/TLS for HTTPS with netsh with self-signed certificate.<br>
 Note: This is not recommended to environments production.
@@ -144,7 +144,7 @@ Note: This is not recommended to environments production.
    netsh http delete sslcert ipport=0.0.0.0:443
    ```
 
-#### Reverse Proxy (recommended)
+### Reverse Proxy (recommended)
 
 Simple steps to enable SSL/TLS for HTTPS for example using NGINX Reverse Proxy with self-signed certificate.<br>
 Note: This is not recommended to environments production.
@@ -234,7 +234,7 @@ Note: This is not recommended to environments production.
    }
    ```
    
-### System Service
+## System Service
 
 You can easily install Mini-HTTP-Listener as System Service through simple tools like:
 
@@ -251,9 +251,9 @@ nssm.exe install
 Set the full path of Mini-HTTP-Listener.exe file, Service Name and other desidered settings and just click Install service.<br>
 With this simple procedure, you can easily install other programs as System Service on Windows such as NGINX, described in the previous chapter for the Reverse Proxy.
 
-### Response
+## Response
 
-#### Priority
+### Priority
 
 The Response Priority for the received Requests, is the following:
 
@@ -264,7 +264,7 @@ The Response Priority for the received Requests, is the following:
 
 In the next chapters, You can see how to implements the HTTP Methods and Responses.
 
-#### HTTP Method
+### HTTP Method
 
 The Request HTTP Methods are configured on the Response Partial Class ([Response.cs](Mini-HTTP-Listener/response/Response.cs))<br>
 In the *SetResponse(object o)* Method, you can edit the *switch(HTTP_Method)* to add for example other HTTP Methos that you need.<br>
@@ -281,9 +281,9 @@ In the methods you can set for example the Absolute URL Response Paths and the i
 Note: It is not mandatory to implement the responses in these methods.<br>
 To continue with next priority step (Custom Path), simple remember to call *CustomResponse* method.
 
-#### Custom Path
+### Custom Path
 
-##### Absolute URL
+#### Absolute URL
 
 To set an Absolute CustomPath URL, first extend the Response Partial Class.<br>
 Add a new generic method of type *Dictionary<string, object>* with your personal custom name, with the *CustomPath* attribute.<br>
@@ -293,7 +293,7 @@ Note: These methods for CustomPath are Generics, You can't use Dependency Inject
 To call for example NLog you can manually reload the settings.<br>
 You can find some example on the *response-custom* folder.
 
-##### Special URL
+#### Special URL
 
 The procedure for implements a Special CustomPath URL is the same as previous chapter.<br>
 To specify a parameter, set the URL Path On the *CustomPath* attribute with the following sintax:
@@ -312,13 +312,13 @@ On this implementation the Data Type already available for Special CustomPath UR
 You can add for example your custom Data Type on the *switch(dataType)* of *CustomResponse* method, in the Response Partial Class ([Response_Custom.cs](Mini-HTTP-Listener/response/Response_Custom.cs)).<br>
 You can find some example on the *response-custom* folder.
 
-##### Custom Classes
+#### Custom Classes
 
 You can also create your custom classes without extends the Response Partial Class.<br>
 Add generic methods with CustomPath attribute in the same manner of previous chapters.<br>
 You can find an example on the *response-custom* folder.
 
-#### Authentication
+### Authentication
 
 The Authentication method is available on the Response Partial Class ([Response_Auth.cs](Mini-HTTP-Listener/response/Response_Auth.cs)).<br>
 As mentioned at the beginning, 2 authentication types are available on this implementation (basic and digest).<br>
@@ -359,7 +359,7 @@ To require the authentication, there are some differents mode:
 
 You can find some example on the *response-custom* folder and on ([Response_HTTP.cs](Mini-HTTP-Listener/response/Response_HTTP.cs)).
 
-#### PHP
+### PHP
 
 A basic support for PHP is available (tested with PHP 8.1.10 ZTS Visual C++ 2019 x64).<br>
 On php folder there is [PHP Class](Mini-HTTP-Listener/php/PHP.cs) with a basic CGI implementation in the *Response* generic method.<br>
