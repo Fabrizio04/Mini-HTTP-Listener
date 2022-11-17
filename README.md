@@ -318,7 +318,7 @@ You can also create your custom classes without extends the Response Partial Cla
 Add generic methods with CustomPath attribute in the same manner of previous chapters.<br>
 You can find an example on the *response-custom* folder.
 
-### Authentication
+#### Authentication
 
 The Authentication method is available on the Response Partial Class ([Response_Auth.cs](Mini-HTTP-Listener/response/Response_Auth.cs)).<br>
 As mentioned at the beginning, 2 authentication types are available on this implementation (basic and digest).<br>
@@ -359,7 +359,7 @@ To require the authentication, there are some differents mode:
 
 You can find some example on the *response-custom* folder and on ([Response_HTTP.cs](Mini-HTTP-Listener/response/Response_HTTP.cs)).
 
-### PHP
+#### PHP
 
 A basic support for PHP is available (tested with PHP 8.1.10 ZTS Visual C++ 2019 x64).<br>
 On php folder there is [PHP Class](Mini-HTTP-Listener/php/PHP.cs) with a basic CGI implementation in the *Response* generic method.<br>
